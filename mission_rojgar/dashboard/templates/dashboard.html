@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Data</h1>
+        <div>count of admin :{{ admin_count }} </div>
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <!-- Add more table headers for other columns as needed -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in admin_data %}
+                    <tr>
+                        <td>{{ row.0 }}</td>
+                        <td>{{ row.1 }}</td>
+                        <!-- Add more table data cells for other columns as needed -->
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Include Bootstrap JS (optional, for certain features) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
